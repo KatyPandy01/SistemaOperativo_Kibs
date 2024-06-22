@@ -1,0 +1,133 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import '../estilos/fondo.css'
+import '../estilos/footer.css'
+
+
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+</head>
+<body>
+  <div class="aurora"></div>
+  <slot></slot>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+		<link rel="stylesheet" href="../src/estilos/NavBar.css" />
+	</head>
+	<body>
+		<nav class="nav">
+
+			<a href="https://myaccount.google.com/?utm_source=OGB&utm_medium=app" class="nav__link" target="_blank"style="margin-left:10px; margin-right:-10px">
+				<i class="material-icons nav__icon">dashboard</i>
+			</a>
+			
+			<input type="text" placeholder="Buscar.." style="flex-grow: 1; max-width: 200px; max-height: 25px; margin: 0 1rem; padding: 0.5rem; border-radius: 9px; border: none; margin-top:0.5rem">
+
+		     <a href="https://www.pinturillo2.com/es/" class="nav__link" target="_blank" style="margin-left:100px; margin-right:20px">
+				<i class="material-icons nav__icon">palette</i>
+			</a>
+
+			<a href="https://open.spotify.com/intl-es" class="nav__link" target="_blank" style="margin-left:20px; margin-right:20px">
+				<i class="material-icons nav__icon">music_note</i>
+				
+			</a>
+			
+			<a href="https://mail.google.com/mail/u/0/#inbox" class="nav__link" target="_blank"style="margin-left:20px; margin-right:20px">
+				<i class="material-icons nav__icon">mail</i>
+
+			</a>
+
+			<a href="https://docs.google.com/document/u/0/" class="nav__link" target="_blank"style="margin-left:20; margin-right:20px">
+				<i class="material-icons nav__icon">insert_drive_file</i>
+
+			</a>
+			
+			
+
+		</nav>
+	</body>
+</html>
+
+
+
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
